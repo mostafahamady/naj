@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naj.Web", "naj.Web\naj.Web.csproj", "{894916CE-57C0-455E-A0ED-48D9DDEE7809}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naj.EServices", "naj.EServices\naj.EServices.csproj", "{894916CE-57C0-455E-A0ED-48D9DDEE7809}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
