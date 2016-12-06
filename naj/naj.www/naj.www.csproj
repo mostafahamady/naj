@@ -13,9 +13,10 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>naj.www</RootNamespace>
-    <AssemblyName>naj.www</AssemblyName>
+    <RootNamespace>Naj.www</RootNamespace>
+    <AssemblyName>Naj.www</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -34,6 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <MvcBuildViews>true</MvcBuildViews>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <MvcBuildViews>true</MvcBuildViews>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -77,7 +80,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -117,24 +122,214 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\ajax-loader.gif" />
+    <Content Include="assets\css\golden-forms-ie8.css" />
+    <Content Include="assets\css\golden-forms-ie9.css" />
+    <Content Include="assets\css\golden-forms.css" />
+    <Content Include="assets\css\Internal.css" />
+    <Content Include="assets\css\menuzord.css" />
+    <Content Include="assets\css\Poll.css" />
+    <Content Include="assets\css\Rotator.css" />
+    <Content Include="assets\css\Slider.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\whirly.css" />
+    <Content Include="assets\images\AbouConBot.jpg" />
+    <Content Include="assets\images\AbouConHead.jpg" />
+    <Content Include="assets\images\AboutImages.jpg" />
+    <Content Include="assets\images\AboutImages.png" />
+    <Content Include="assets\images\AboutMaps.jpg" />
+    <Content Include="assets\images\AboutMaps.png" />
+    <Content Include="assets\images\AboutNaj.jpg" />
+    <Content Include="assets\images\AboutNaj.png" />
+    <Content Include="assets\images\AboutNajran.jpg" />
+    <Content Include="assets\images\active.png" />
+    <Content Include="assets\images\ajax-loader.gif" />
+    <Content Include="assets\images\All_Bg.jpg" />
+    <Content Include="assets\images\BannerShadow.png" />
+    <Content Include="assets\images\bg-sequence.jpg" />
+    <Content Include="assets\images\BreadCrambHome.jpg" />
+    <Content Include="assets\images\BreadCrampBg.jpg" />
+    <Content Include="assets\images\bt-next.png" />
+    <Content Include="assets\images\bt-prev.png" />
+    <Content Include="assets\images\close.png" />
+    <Content Include="assets\images\Email.png" />
+    <Content Include="assets\images\EServBu.png" />
+    <Content Include="assets\images\EServGov.png" />
+    <Content Include="assets\images\EServHu.png" />
+    <Content Include="assets\images\FaceBook.gif" />
+    <Content Include="assets\images\FaqBanner.jpg" />
+    <Content Include="assets\images\FliengBg.jpg" />
+    <Content Include="assets\images\FootBgLogo.jpg" />
+    <Content Include="assets\images\FootCall.jpg" />
+    <Content Include="assets\images\FootMessage.jpg" />
+    <Content Include="assets\images\FootPin.jpg" />
+    <Content Include="assets\images\FullDetailsDateBG.jpg" />
+    <Content Include="assets\images\FullWidthShadow.jpg" />
+    <Content Include="assets\images\Gridadd.png" />
+    <Content Include="assets\images\Griddelet.png" />
+    <Content Include="assets\images\Gridedit.png" />
+    <Content Include="assets\images\GridLeftArr.png" />
+    <Content Include="assets\images\GridPagerBG.jpg" />
+    <Content Include="assets\images\GridRightArr.png" />
+    <Content Include="assets\images\GridSearchBtn.png" />
+    <Content Include="assets\images\LinkedIn.gif" />
+    <Content Include="assets\images\ListDate.png" />
+    <Content Include="assets\images\MainContentBG.jpg" />
+    <Content Include="assets\images\MenuBg.jpg" />
+    <Content Include="assets\images\MenuSep.gif" />
+    <Content Include="assets\images\model1.jpg" />
+    <Content Include="assets\images\model2.jpg" />
+    <Content Include="assets\images\model3.jpg" />
+    <Content Include="assets\images\model4.jpg" />
+    <Content Include="assets\images\model5.jpg" />
+    <Content Include="assets\images\model6.jpg" />
+    <Content Include="assets\images\MopNajlogo.jpg" />
+    <Content Include="assets\images\MoreDetails.png" />
+    <Content Include="assets\images\Najlogo.jpg" />
+    <Content Include="assets\images\navigation bars.png" />
+    <Content Include="assets\images\NewsImage.jpg" />
+    <Content Include="assets\images\open.png" />
+    <Content Include="assets\images\PagerFirst.png" />
+    <Content Include="assets\images\PagerItem.png" />
+    <Content Include="assets\images\PagerLast.png" />
+    <Content Include="assets\images\PagerNext.png" />
+    <Content Include="assets\images\PagerPrev.png" />
+    <Content Include="assets\images\PagerSelected.png" />
+    <Content Include="assets\images\PannerFooter.jpg" />
+    <Content Include="assets\images\PrayAsr.png" />
+    <Content Include="assets\images\PrayDohr.png" />
+    <Content Include="assets\images\PrayEshaa.png" />
+    <Content Include="assets\images\PrayFagr.png" />
+    <Content Include="assets\images\PrayMaghrb.png" />
+    <Content Include="assets\images\PrayShroq.png" />
+    <Content Include="assets\images\PrayTitl.png" />
+    <Content Include="assets\images\radioBg.jpg" />
+    <Content Include="assets\images\RotatorL.jpg" />
+    <Content Include="assets\images\RotatorR.jpg" />
+    <Content Include="assets\images\SeparatorBg.jpg" />
+    <Content Include="assets\images\SeparatorImg.jpg" />
+    <Content Include="assets\images\SpaceImage.png" />
+    <Content Include="assets\images\Tawasul.png" />
+    <Content Include="assets\images\threeSectionBg.jpg" />
+    <Content Include="assets\images\threeSectionShadow.jpg" />
+    <Content Include="assets\images\TopNavCalender.jpg" />
+    <Content Include="assets\images\TopNavFAQ.jpg" />
+    <Content Include="assets\images\TopNavPray.jpg" />
+    <Content Include="assets\images\TopNavSiteMap.jpg" />
+    <Content Include="assets\images\TopNavVote.jpg" />
+    <Content Include="assets\images\TopNavWeazer.jpg" />
+    <Content Include="assets\images\TopShadow.png" />
+    <Content Include="assets\images\Twitter.gif" />
+    <Content Include="assets\images\WeatherImages\000.png" />
+    <Content Include="assets\images\WeatherImages\01.png" />
+    <Content Include="assets\images\WeatherImages\02.png" />
+    <Content Include="assets\images\WeatherImages\03.png" />
+    <Content Include="assets\images\WeatherImages\04.png" />
+    <Content Include="assets\images\WeatherImages\06.png" />
+    <Content Include="assets\images\WeatherImages\07.png" />
+    <Content Include="assets\images\WeatherImages\11.png" />
+    <Content Include="assets\images\WeatherImages\12.png" />
+    <Content Include="assets\images\WeatherImages\13.png" />
+    <Content Include="assets\images\WeatherImages\14.png" />
+    <Content Include="assets\images\WeatherImages\16.png" />
+    <Content Include="assets\images\WeatherImages\17.png" />
+    <Content Include="assets\images\WeatherImages\18.png" />
+    <Content Include="assets\images\WeatherImages\19.png" />
+    <Content Include="assets\images\WeatherImages\20.png" />
+    <Content Include="assets\images\WeatherImages\21.png" />
+    <Content Include="assets\images\WeatherImages\22.png" />
+    <Content Include="assets\images\WeatherImages\23.png" />
+    <Content Include="assets\images\WeatherImages\24.png" />
+    <Content Include="assets\images\WeatherImages\25.png" />
+    <Content Include="assets\images\WeatherImages\26.png" />
+    <Content Include="assets\images\WeatherImages\29.png" />
+    <Content Include="assets\images\WeatherImages\30.png" />
+    <Content Include="assets\images\WeatherImages\31.png" />
+    <Content Include="assets\images\WeatherImages\32.png" />
+    <Content Include="assets\images\WeatherImages\33.png" />
+    <Content Include="assets\images\WeatherImages\34.png" />
+    <Content Include="assets\images\WeatherImages\35.png" />
+    <Content Include="assets\images\WeatherImages\36.png" />
+    <Content Include="assets\images\WeatherImages\37.png" />
+    <Content Include="assets\images\WeatherImages\38.png" />
+    <Content Include="assets\images\WeatherImages\39.png" />
+    <Content Include="assets\images\WeatherImages\40.png" />
+    <Content Include="assets\images\WeatherImages\41.png" />
+    <Content Include="assets\images\WeatherImages\42.png" />
+    <Content Include="assets\images\WeatherImages\43.png" />
+    <Content Include="assets\images\WeatherImages\44.png" />
+    <Content Include="assets\images\WeatherImages\أتربة أو غبار.png" />
+    <Content Include="assets\images\WeatherImages\أمطار رعدية.png" />
+    <Content Include="assets\images\WeatherImages\امطار رعدية.png" />
+    <Content Include="assets\images\WeatherImages\رعد.png" />
+    <Content Include="assets\images\WeatherImages\صحو.png" />
+    <Content Include="assets\images\WeatherImages\عاصفة ترابية.png" />
+    <Content Include="assets\images\WeatherImages\عوالق.png" />
+    <Content Include="assets\images\WeatherImages\غائم جزئي.png" />
+    <Content Include="assets\images\WeatherImages\غبار.png" />
+    <Content Include="assets\images\WeatherImages\مشمس.png" />
+    <Content Include="assets\images\WeatherImages\ممطر.png" />
+    <Content Include="assets\scripts\angular-slick.js" />
+    <Content Include="assets\scripts\angular.min.js" />
+    <Content Include="assets\scripts\General.js" />
+    <Content Include="assets\scripts\Internal.js" />
+    <Content Include="assets\scripts\jquery-1.11.1.min.js" />
+    <Content Include="assets\scripts\jquery-1.3.2.min.js" />
+    <Content Include="assets\scripts\jquery.accordion.source.js" />
+    <Content Include="assets\scripts\jquery.fadethis.js" />
+    <Content Include="assets\scripts\jquery.placeholder.min.js" />
+    <Content Include="assets\scripts\jquery.sequence-min.js" />
+    <Content Include="assets\scripts\jquery.smoove.js" />
+    <Content Include="assets\scripts\menuzord.js" />
+    <Content Include="assets\scripts\PrayTimes.js" />
+    <Content Include="assets\scripts\sequencejs-options.modern-slide-in.js" />
+    <Content Include="assets\scripts\slick.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\MediaCenter\Controllers\NewsController.cs" />
+    <Compile Include="Areas\MediaCenter\Controllers\PressKitController.cs" />
+    <Compile Include="Areas\MediaCenter\Controllers\NewsLetterController.cs" />
+    <Compile Include="Areas\MediaCenter\Controllers\EventsController.cs" />
+    <Compile Include="Areas\MediaCenter\MediaCenterAreaRegistration.cs" />
+    <Compile Include="Controllers\AboutMunicipalityController.cs" />
+    <Compile Include="Controllers\AboutNajranController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="assets\fonts\ge-ss-two-light.otf" />
+    <Content Include="Areas\MediaCenter\Views\web.config" />
+    <Content Include="Areas\MediaCenter\Views\News\_BookmarkedNews.cshtml" />
+    <Content Include="Areas\MediaCenter\Views\News\Control.cshtml" />
+    <Content Include="Areas\MediaCenter\Views\News\Detail.cshtml" />
+    <Content Include="Areas\MediaCenter\Views\News\Index.cshtml" />
+    <Content Include="Areas\MediaCenter\Views\News\_LatestNews.cshtml" />
+    <Content Include="Areas\MediaCenter\Views\PressKit\Detail.cshtml" />
+    <Content Include="Areas\MediaCenter\Views\PressKit\Index.cshtml" />
     <None Include="Properties\PublishProfiles\localhost.pubxml" />
+    <Content Include="Views\Shared\_InternalLayout.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\AboutMunicipality\CornerSecretary.cshtml" />
+    <Content Include="Views\AboutMunicipality\DepartmentsAndDivisions.cshtml" />
+    <Content Include="Views\AboutMunicipality\MunicipalitiesAffiliate.cshtml" />
+    <Content Include="Views\AboutMunicipality\OrganizationStructure.cshtml" />
+    <Content Include="Views\AboutMunicipality\VisionAndMission.cshtml" />
+    <Content Include="Views\AboutNajran\Guide.cshtml" />
+    <Content Include="Views\AboutNajran\Index.cshtml" />
+    <Content Include="Views\AboutNajran\Overview.cshtml" />
+    <Content Include="Views\AboutNajran\PhotoGallery.cshtml" />
+    <Content Include="Views\Shared\_BreadCrumb.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,7 +338,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Areas\MediaCenter\Models\" />
+    <Folder Include="Areas\MediaCenter\Views\Events\" />
+    <Folder Include="Areas\MediaCenter\Views\NewsLetter\" />
+    <Folder Include="Areas\MediaCenter\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,11 @@
+﻿CREATE TABLE [System].[Page] (
+    [Id]     UNIQUEIDENTIFIER CONSTRAINT [DF_Page_Id] DEFAULT (newid()) NOT NULL,
+    [Name]   NVARCHAR (50)    NOT NULL,
+    [Title]  NVARCHAR (200)   NOT NULL,
+    [Brief]  NVARCHAR (500)   NULL,
+    [URL]    NVARCHAR (200)   NOT NULL,
+    [MenuId] UNIQUEIDENTIFIER NOT NULL,
+    CONSTRAINT [PK_Page] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Menu] FOREIGN KEY ([MenuId]) REFERENCES [System].[Menu] ([Id])
+);
+

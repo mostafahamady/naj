@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /******************************
  3RD PARTY PLUGIN CUSTOMIZATION 
 ******************************/
@@ -1326,8 +1326,12 @@ Fullcalendar
   position: relative;
   text-align: center;
   width: 75px;
-  height: 75px;
-  line-height: 75px; }
+  height: 150px;
+  line-height: 150px; }
+
+.easy-pie-chart .number span{
+    padding-right:55px;
+}
   .easy-pie-chart .number canvas {
     position: absolute;
     top: 0;

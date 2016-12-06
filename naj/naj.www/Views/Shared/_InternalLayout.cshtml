@@ -1,0 +1,290 @@
+﻿<!--DOCTYPE html-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta charset="utf-8"/>
+    <title>@ViewBag.Title</title>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="/assets/css/menuzord.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/Rotator.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/Slider.css" media="screen" rel="stylesheet"/>
+    <link href="/assets/css/Internal.css" media="screen" rel="stylesheet"/>
+    <script src="/assets/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery.smoove.js"></script>
+    <script src="/assets/scripts/General.js"></script>
+    <script src="/assets/scripts/jquery.sequence-min.js"></script>
+    <script src="/assets/scripts/sequencejs-options.modern-slide-in.js"></script>
+    <script src="/assets/scripts/slick.min.js" type="text/javascript"></script>
+    <script src="/assets/scripts/menuzord.js" type="text/javascript"></script>
+    <script src="/assets/scripts/jquery.fadethis.js"></script>
+    <script src="/assets/scripts/angular.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).fadeThis({
+                speed: 1000
+            });
+        });
+    </script>
+    @RenderSection("Head", required: false)
+</head>
+<body>
+<header>
+    <div class="TopBarNav hideme">
+        <div class="TopBarNav hideme">
+            <div class="LeftIcons DNone568">
+                <span class="WitLftBrd ">
+                    <a href="#">
+                        <img src="/assets/images/TopNavCalender.jpg" style="margin-left: 5px" class="marTB">
+                    </a>
+                    @DateTime.Now.ToString("dd MMM yyyy", new System.Globalization.CultureInfo("ar-SA")) - @DateTime.Now.ToString("dd MMM yyyy", new System.Globalization.CultureInfo("ar-EG"))
+                </span>
+                <span class="WitLftBrd GrayRitBrd"><a href="#"><img src="/assets/images/TopNavVote.jpg" class="marTB" /></a></span>
+                <span class="WitLftBrd GrayRitBrd"><a href="#"><img src="/assets/images/TopNavFAQ.jpg" class="marTB" /></a></span>
+                <span class="WitLftBrd GrayRitBrd"><a href="#"><img src="/assets/images/TopNavPray.jpg" class="marTB" /></a></span>
+                <span class="WitLftBrd GrayRitBrd"><a href="#"><img src="/assets/images/TopNavWeazer.jpg" class="marTB" /></a></span>
+                <span class="GrayRitBrd"><a href="#"><img src="/assets/images/TopNavSiteMap.jpg" class="marTB"></a></span>
+            </div>
+        </div>
+    </div>
+    <div class="LogoBar hideme">
+        <div class="Logo">
+            <a href="/Home" class="DefLogo"><img alt="logo" src="/assets/images/Najlogo.jpg"></a>
+            <a href="/Home" class="MobLogo"><img alt="logo" src="/assets/images/MopNajlogo.jpg"></a>
+        </div>
+        <div class="SearchAnSocial">
+            <div class="Social">
+                <a href="#"><img alt="" src="/assets/images/LinkedIn.gif"></a>
+                <a href="#"><img alt="" src="/assets/images/FaceBook.gif"></a>
+                <a href="#"><img alt="" src="/assets/images/Twitter.gif"></a>
+            </div>
+            <div class="SearchArea">
+                <input class="srchTxtBox" type="text" value="ادخل كلمة البحث "/><input class="srchBtn" type="submit" value="بحث"/>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="menuzord ">
+        <div id="menuzord" style="max-width: 940px; margin: auto">
+
+            <ul class="menuzord-menu">
+                <li class="active"><a href="/Home">الصفحة الرئيسية</a></li>
+                <li>
+                    <a href="/AboutNajran">عن نجران</a>
+                    <ul class="dropdown">
+                        <li><a href="/AboutNajran/Overview">نبذة عن منطقة نجران</a></li>
+                        <li><a href="/AboutNajran/Guide">دليل نجران</a></li>
+                        <li><a href="/AboutNajran/PhotoGallery">معرض الصور</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/AboutMunicipality">عن الأمانة</a>
+                    <ul class="dropdown">
+                        <li><a href="/AboutMunicipality/VisionAndMission">الرؤية والرسالة</a></li>
+                        <li><a href="/AboutMunicipality/OrganizationStructure">الهيكل التنظيمي</a></li>
+                        <li><a href="/AboutMunicipality/CornerSecretary">ركن الأمين</a></li>
+                        <li><a href="/AboutMunicipality/DepartmentsAndDivisions">الادارات والاقسام</a></li>
+                        <li><a href="/AboutMunicipality/MunicipalitiesAffiliate">البلديات التابعة</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/AmanehServices/Pages/default.aspx">الخدمات الإلكترونية</a>
+                    <ul class="dropdown">
+                        <li><a href="http://EServices.localhost/Individual" target="_blank">خدمات الافراد</a></li>
+                        <li><a href="http://EServices.localhost/Business" target="_blank">خدمات قطاع الأعمال</a></li>
+                        <li><a href="http://EServices.localhost/Government" target="_blank">خدمات الجهات الحكومية</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/MediaCenter">المركز الإعلامي</a>
+                    <ul class="dropdown">
+                        <li><a href="/MediaCenter/News">الاخبار</a></li>
+                        <li><a href="/MediaCenter/PressKit">الملف الصحفي</a></li>
+                        <li><a href="/MediaCenter/Events">الفعاليات والمناسبات</a></li>
+                        <li><a href="/MediaCenter/Newsletter">النشرة البريدية</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/ContactUs">تواصل معنا</a>
+                    <ul class="dropdown">
+                        <li><a href="/ContactUs/ComplaintsSuggestionsAndInquiries">الشكاوى والاقتراحات والاستفسارات</a></li>
+                        <li><a href="/ContactUs/Incident940">بلاغات 940</a></li>
+                        <li><a href="/ContactUs/Poll">التصويت</a></li>
+                        <li><a href="/ContactUs/SocialCommunication">التواصل الاجتماعي</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+<div style="height: 35px"></div>
+<div class="MainContent">
+    <div class="BreadCrampDiv">
+        <img class="IntShadowBan" src="/assets/images/TopShadow.png">
+        <div class="BreadCrampContent">
+            @{
+                Html.RenderPartial("~/Views/Shared/_BreadCrumb.cshtml");
+            }
+        </div>
+    </div>
+    <div class="PageImage" style="display: none;"><img id="PageImage" src="">
+    </div>
+    <div class="pageContent">
+        @RenderBody()
+    </div>
+</div>
+<footer>
+    <div class="fliengContact ">
+        <div class="fliengContactDiv">
+            <div class="flien2Links">
+                <a href="#"><img src="/assets/images/Tawasul.png"></a>
+                <a href="#"><img src="/assets/images/Email.png"></a>
+            </div>
+            <div class="flien2Other">
+                <p><a class="yellowLink" href="/MediaCenter/Newsletter/Pages/default.aspx">النشرة البريدية</a>
+                </p>
+                <p>لتصلك نشرتنا البريدية</p>
+                <div class="SearchArea">
+                    <input class="srchTxtBox" type="text" value="أدخل بريدك الإلكتروني هنا"/><input class="srchBtn" type="submit" value="سجل"/>
+                </div>
+                <p class="margTop10"><a class="yellowLink " href="/MediaCenter/News/Pages/default.aspx">الأخبار </a>
+                </p>
+                <p><a class="yellowLink" href="/FAQ/Pages/default.aspx">الأسئلة الشائعة </a>
+                </p>
+                <p><a class="yellowLink" href="/AboutNajran/NajranGuide/Pages/default.aspx">دليل نجران </a>
+                </p>
+                <p><a class="yellowLink" href="/SiteMap/Pages/default.aspx">خريطة الموقع</a>
+                </p>
+                <p class="margTop20"><img src="/assets/images/FootPin.jpg" style="vertical-align: bottom"> مدينة نجران - الفيصلية
+                </p>
+                <p class="margTop10"><img src="/assets/images/FootMessage.jpg" style="vertical-align: bottom"> link@najran.gov.sa
+                </p>
+                <p class="margTop10"><img src="/assets/images/FootCall.jpg" style="vertical-align: bottom"> +966 17 5 22 36 00
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="FooterLinks">
+        <div class="FoterLinksContent">
+            <div class="FoterLinksR DNone568">
+                <div class="FoterLinks3Col">
+                    <p><a class="yellowLink" href="/AboutMunicipality">عن الأمانة </a></p>
+                    <p><a href="/AboutMunicipality/VisionAndMission">الرؤية والرسالة </a></p>
+                    <p><a href="/AboutMunicipality/OrgnizarionStructure">الهيكل التنظيمي للأمانة </a></p>
+                    <p><a href="/AboutMunicipality/DepartmentsAndDivisions">الإدارات والأقسام </a></p>
+                    <p><a href="/AboutMunicipality/MunicipalitiesAffiliate">البلديات التابعة </a></p>
+                    <p class="margTop20"><a class="yellowLink" href="#">خدمات الأفراد</a></p>
+                    <p><a href="#">معاملة</a></p>
+                    <p><a href="#">استعلام الفواتير</a></p>
+                    <p>
+                        <a href="#">طلبات رخص المحلات </a>
+                    </p>
+                    <p>
+                        <a href="#">طلبات المنح</a>
+                    </p>
+                    <p>
+                        <a href="#">إستعلام المنح</a>
+                    </p>
+                    <p>
+                        <a href="#">استعلام عن رخصة برقم الصك</a>
+                    </p>
+                </div>
+                <div class="FoterLinks3Col">
+                    <p>
+                        <a href="#">التوظيف</a>
+                    </p>
+                    <p>
+                        <a href="#">مخالفاتي</a>
+                    </p>
+                    <p>
+                        <a href="#">عقودي</a>
+                    </p>
+                    <p><a href="#">رخصي</a>
+                    </p>
+                    <p>
+                        <a href="#">بلاغات 940</a>
+                    </p>
+                    <p class="margTop20">
+                        <a class="yellowLink" href="#">خدمات الجهات الحكومية</a>
+                    </p>
+                    <p>
+                        <a href="#">الرخص الإنشائية</a>
+                    </p>
+                    <p>
+                        <a href="#">رخص المحلات وعقود الإستثمار</a>
+                    </p>
+                    <p>
+                        <a href="#">استعلام</a>
+                    </p>
+                    <p>
+                        <a href="#">الزكاة والدخل</a>
+                    </p>
+                    <p>
+                        <a href="#">الغرفة التجارية</a>
+                    </p>
+                </div>
+                <div class="FoterLinks3Col">
+                    <p>
+                        <a class="yellowLink" href="#">خدمات قطاع الأعمال</a>
+                    </p>
+                    <p>
+                        <a href="#">تحديث البيانات</a>
+                    </p>
+                    <p>
+                        <a href="#">شراء كراسة مناقصة</a>
+                    </p>
+                    <p>
+                        <a href="#">عرض الفرص الاستثمارية</a>
+                    </p>
+                    <p>
+                        <a href="#">شراء الفرص الاستثمارية</a>
+                    </p>
+                    <p>
+                        <a href="#">اعلان المناقصات</a>
+                    </p>
+                    <p>
+                        <a href="#">استعلام عن معاملة وارده من عميل</a>
+                    </p>
+                    <p>
+                        <a href="#">اشعارات المنافسات</a>
+                    </p>
+                    <p>
+                        <a href="#">مطالبة مالية</a>
+                    </p>
+                    <p>
+                        <a href="#">تحميل عطاء</a>
+                    </p>
+                    <p>
+                        <a href="#">فتح المظاريف</a>
+                    </p>
+                    <p>
+                        <a href="#">الانظمة واللوائح والاشتراطات</a>
+                    </p>
+                    <p>
+                        <a href="#">ضماناتي</a>
+                    </p>
+                </div>
+
+            </div>
+            <div class="FoterLinksL">
+            </div>
+        </div>
+    </div>
+    <div class="FooterCopyR">
+        <div class="FoterContent">
+            <div class="FloatedR DNone568">
+                لأفضل تصفح يرجي إستخدام النسخة النهائية من المتصفحات
+            </div>
+                <div class="FloatedL">
+                    جميع الحقوق محفوظة لــ أمانة منطقة نجران ©2015
+                    <br />
+                    هذا الموقع تتم إدارته بواسطة أمانة منطقة نجران
+                    <br />
+                    رقم إصدار هذا الموقع : v1.0 | آخر تحديث للموقع تم بتاريخ : 25 نوفمبر 2016
+                </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

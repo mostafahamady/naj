@@ -1,0 +1,66 @@
+﻿<script type="text/javascript">
+    home
+        .controller('bookmarkedNewsRotatorCtrl', function($scope, $timeout, $http) {
+            $http({
+                    method: 'GET',
+                    url: '/MediaCenter/News/Bookmarked'
+                })
+                .then(
+                    function successCallback(response) {
+                        $scope.bookmarkedNews = response.data;
+                    },
+                    function errorCallback(response) {
+                    }
+                );
+        })
+        .directive('myRepeatDirective', function() {
+            return function(scope, element, attrs) {
+                if (scope.$last) {
+                    scope.$emit('LastElem');
+                }
+            };
+        })
+        .directive('myMainDirective', function() {
+            return function (scope, element, attrs) {
+                scope.$on('LastElem', function (event) {
+                    var options = {
+                        nextButton: true,
+                        prevButton: true,
+                        pagination: true,
+                        animateStartingFrameIn: true,
+                        autoPlay: true,
+                        autoPlayDelay: 3000,
+                        preloader: true,
+                        preloadTheseFrames: [1]
+                        //,
+                        //preloadTheseImages: [
+                        //    "images/tn-model1.png",
+                        //    "images/tn-model2.png",
+                        //    "images/tn-model3.png"
+                        //]
+                    };
+
+                    var mySequence = element.sequence(options).data("sequence");
+                    //var mySequence = $("#sequence").sequence(options).data("sequence");
+                });
+            };
+        });
+</script>
+
+<div id="sequence" ng-app="bookmarkedNewsApp" ng-controller="bookmarkedNewsRotatorCtrl" my-main-directive>
+    <img class="ShadowBan" src="/assets/images/BannerShadow.png">
+    <img alt="Previous Frame" class="sequence-prev" src="/assets/images/bt-prev.png" />
+    <img alt="Next Frame" class="sequence-next" src="/assets/images/bt-next.png" />
+    <ul class="sequence-canvas">
+        <li ng-repeat="new in bookmarkedNews" my-repeat-directive>
+            <h2 class="title">{{new.Title}}</h2>
+            <h3 class="subtitle">{{new.Details}}</h3>
+            <img alt="Model 1" class="model" src="{{new.ImageURL}}" />
+        </li>
+    </ul>
+    <ul class="sequence-pagination">
+        <li ng-repeat="new in bookmarkedNews"><img alt="{{new.Title}}" src="/assets/images/SpaceImage.png" /></li>
+    </ul>
+</div>
+
+

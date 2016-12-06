@@ -1,0 +1,157 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_InternalLayout.cshtml";
+    ViewBag.Title = "الأخبار";
+}
+
+@section Head
+{
+    <style type="text/css">
+        .ListItem {
+            background: white;
+            border-radius: 4px;
+            box-shadow: none;
+            box-sizing: border-box;
+            border-bottom: 2px #999a9a solid;
+            min-height: 121px;
+            margin: 15px 0;
+            position: relative;
+            padding-right: 80px;
+            -webkit-transition: background 0.3s linear;
+            -moz-transition: background 0.3s linear;
+            -o-transition: background 0.3s linear;
+            transition: background 0.3s linear;
+        }
+
+        .ListItemHover {
+            background: #e2e2e2;
+            -webkit-transition: background 0.3s linear;
+            -moz-transition: background 0.3s linear;
+            -o-transition: background 0.3s linear;
+            transition: background 0.3s linear;
+        }
+
+        .ListDate {
+            background: transparent url('/assets/images/ListDate.png') no-repeat;
+            width: 66px;
+            height: 69px;
+            position: absolute;
+            top: -5px;
+            right: -3px;
+            color: #fff;
+            font-size: 10px;
+            padding: 3px 0;
+            line-height: 12px;
+        }
+
+        .ListDate span {
+            display: block;
+            text-align: center;
+        }
+
+        .NewsTxt {
+            width: 70%;
+            overflow: hidden;
+            max-height: 120px;
+        }
+
+        .NewsTxt a {
+            display: block;
+            padding: 10px 0 5px;
+        }
+
+        .NewsImg {
+            width: 30%;
+            max-height: 120px;
+        }
+
+        .NewsImg img {
+            width: 100%;
+            border-right: 1px white solid;
+            height: 120px;
+            border-radius: 4px 0px 0px 4px;
+            -webkit-box-shadow: 5px 0 15px -5px #888;
+            box-shadow: 5px 0 15px -5px #888;
+        }
+
+        .ListDateNo {
+            font-size: 20px;
+            padding: 3px 0;
+            line-height: 16px;
+        }
+
+        .cf2 {
+            position: relative;
+        }
+
+        .cf2 img {
+            position: absolute;
+            left: 0;
+            -webkit-transition: opacity .5s ease-in-out;
+            -moz-transition: opacity .5s ease-in-out;
+            -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+        }
+
+        .cf2 .transparent {
+            opacity: 100;
+        }
+
+        .cf_onclick {
+            cursor: pointer;
+        }
+
+        .top {
+            opacity: 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var mediaCenterApp = angular.module('mediaCenterApp', []);
+
+        mediaCenterApp.controller('newsListCtrl', function($scope, $http) {
+            $http({
+                    method: 'GET',
+                    url: '/MediaCenter/News/All'
+                })
+                .then(
+                    function successCallback(response) {
+                        $scope.news = response.data;
+                    },
+                    function errorCallback(response) {
+                    }
+                );
+        });
+
+        $(document)
+            .on('mouseover', '.cf_onclick', function (e) {
+                $('.top',this).addClass("transparent");
+                $(this).closest(".ListItem").addClass("ListItemHover");
+            })
+            .on('mouseleave', '.cf_onclick', function(e) {
+                $('.top', this).removeClass("transparent");
+                $(this).closest(".ListItem").removeClass("ListItemHover");
+            });
+
+    </script>
+}
+
+<div ng-app="mediaCenterApp" ng-controller="newsListCtrl">
+    <div class="ListItem cf_onclick" ng-repeat="new in news">
+        <div class="ListDate">
+            <span>{{new.Month}}</span>
+            <span class="ListDateNo">{{new.Date}}</span>
+            <span>{{new.Year}}</span>
+        </div>
+        <div class="FloatedR NewsTxt">
+            <a href="{{new.URL}}">{{new.Title}}</a>
+            {{new.Details}}
+        </div>
+        <div class="FloatedL NewsImg cf2">
+            <img class="bottom" src="{{new.ImageURL}}">
+            <a href="{{new.URL}}">
+                <img class="top" src="/assets/images/MoreDetails.png" />
+            </a>
+        </div>
+    </div>
+</div>

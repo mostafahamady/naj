@@ -1,0 +1,6 @@
+﻿CREATE TABLE [System].[Module] (
+    [Id]    UNIQUEIDENTIFIER CONSTRAINT [DF_Module_Id] DEFAULT (newid()) NOT NULL,
+    [Name]  NVARCHAR (50)    NOT NULL,
+    [Title] NVARCHAR (200)   NOT NULL,
+    CONSTRAINT [PK_Module] PRIMARY KEY CLUSTERED ([Id] ASC)
+);

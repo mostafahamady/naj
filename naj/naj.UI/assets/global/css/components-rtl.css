@@ -35,13 +35,19 @@ li {
 /***
 General reset
 ***/
+@font-face {
+    font-family: NajFont;
+    src: url("../fonts/GE_SS_Two_Medium.otf");
+}
 body {
   color: #333333;
-  font-family: "Open Sans", sans-serif;
+  font-family: NajFont !important;
   padding: 0px !important;
   margin: 0px !important;
   direction: "rtl";
-  font-size: 14px; }
+  font-size: 14px;
+  word-spacing: 2px;
+}
 
 /*
  Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't 
@@ -867,7 +873,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: NajFont !important;
   font-weight: 300; }
 
 h1 {
@@ -968,7 +974,7 @@ Utilities
   display: none !important; }
 
 .primary-font {
-  font-family: "Open Sans", sans-serif !important; }
+  font-family: NajFont !important; }
 
 .bold {
   font-weight: 700 !important; }
@@ -4641,7 +4647,7 @@ li [class*=" icon-"].icon-large {
   overflow: hidden;
   height: 300px;
   width: 100%;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: NajFont !important;
   font-size: 14px; }
 .item-list.table .percent {
   width: 30px;
@@ -4803,7 +4809,7 @@ Dropdown Menu
   background-color: #ffffff;
   margin: 10px  0px 0px 0px;
   border: 1px solid #eee;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: NajFont !important;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -6306,7 +6312,7 @@ td > .mt-checkbox.mt-checkbox-single {
   font-weight: 300;
   padding: 3px 6px 3px 6px;
   color: #fff;
-  font-family: "Open Sans", sans-serif; }
+  font-family: NajFont !important }
   .label.label-sm {
     font-size: 13px;
     padding: 2px 5px 2px 5px; }
@@ -12176,7 +12182,7 @@ Portlets
     font-weight: 600;
     font-size: 13px;
     color: #93a2a9;
-    font-family: "Open Sans", sans-serif;
+    font-family: NajFont !important;
     border: 0;
     border-bottom: 1px solid #F2F5F8; }
   .table.table-light > tbody > tr:last-child > td {

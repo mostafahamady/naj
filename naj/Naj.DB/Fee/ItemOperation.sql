@@ -1,0 +1,5 @@
+﻿CREATE TABLE [Fee].[ItemOperation]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT (newid()), 
+    [Name] NVARCHAR(20) NOT NULL
+)

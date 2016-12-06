@@ -3,34 +3,46 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naj.EServices", "naj.EServices\naj.EServices.csproj", "{894916CE-57C0-455E-A0ED-48D9DDEE7809}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naj.EServices", "Naj.EServices\Naj.EServices.csproj", "{894916CE-57C0-455E-A0ED-48D9DDEE7809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naj.Balady", "naj.Balady\naj.Balady.csproj", "{398AD3D2-E8C5-45D1-8034-12CE6D073A4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naj.Baladi", "Naj.Baladi\Naj.Baladi.csproj", "{398AD3D2-E8C5-45D1-8034-12CE6D073A4C}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "naj.UI", "naj.UI\", "{C590E511-1CAC-4F47-A197-DC961BBBD66F}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "naj.UI", "Naj.UI\", "{C590E511-1CAC-4F47-A197-DC961BBBD66F}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_17330"
-		Debug.AspNetCompiler.PhysicalPath = "naj.UI\"
+		Debug.AspNetCompiler.PhysicalPath = "Naj.UI\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17330\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_17330"
-		Release.AspNetCompiler.PhysicalPath = "naj.UI\"
+		Release.AspNetCompiler.PhysicalPath = "Naj.UI\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17330\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "17330"
-		SlnRelativePath = "naj.UI\"
+		SlnRelativePath = "Naj.UI\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naj.www", "naj.www\naj.www.csproj", "{E27755A2-0A76-439D-A7A0-6F074352A069}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naj.www", "Naj.www\Naj.www.csproj", "{E27755A2-0A76-439D-A7A0-6F074352A069}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{2CDAAF33-09B0-4A10-9C6C-46BF8ED7A62A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{10BC9D50-DC99-4803-BA8F-10CA3DC8B699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naj.Data", "Naj.Data\Naj.Data.csproj", "{4A5A3AC2-5CCD-42D0-BEAC-8A08C1F72C90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naj.Common", "Naj.Common\Naj.Common.csproj", "{A7DE76E7-C6B6-4C1C-9AC3-B6031B6B27FC}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Naj.DB", "Naj.DB\Naj.DB.sqlproj", "{818D338E-E183-4418-9BE5-A047347533DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackBone", "BackBone", "{503E458D-E7E9-458D-AB87-8770927993B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naj.Entity", "Naj.Entity\Naj.Entity.csproj", "{072D4A2B-B876-4439-A268-00D2A7D54855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +66,24 @@ Global
 		{E27755A2-0A76-439D-A7A0-6F074352A069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E27755A2-0A76-439D-A7A0-6F074352A069}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E27755A2-0A76-439D-A7A0-6F074352A069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5A3AC2-5CCD-42D0-BEAC-8A08C1F72C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5A3AC2-5CCD-42D0-BEAC-8A08C1F72C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5A3AC2-5CCD-42D0-BEAC-8A08C1F72C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5A3AC2-5CCD-42D0-BEAC-8A08C1F72C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DE76E7-C6B6-4C1C-9AC3-B6031B6B27FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DE76E7-C6B6-4C1C-9AC3-B6031B6B27FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DE76E7-C6B6-4C1C-9AC3-B6031B6B27FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DE76E7-C6B6-4C1C-9AC3-B6031B6B27FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818D338E-E183-4418-9BE5-A047347533DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{818D338E-E183-4418-9BE5-A047347533DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{818D338E-E183-4418-9BE5-A047347533DC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{818D338E-E183-4418-9BE5-A047347533DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{818D338E-E183-4418-9BE5-A047347533DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818D338E-E183-4418-9BE5-A047347533DC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{072D4A2B-B876-4439-A268-00D2A7D54855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072D4A2B-B876-4439-A268-00D2A7D54855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072D4A2B-B876-4439-A268-00D2A7D54855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072D4A2B-B876-4439-A268-00D2A7D54855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +92,9 @@ Global
 		{894916CE-57C0-455E-A0ED-48D9DDEE7809} = {2CDAAF33-09B0-4A10-9C6C-46BF8ED7A62A}
 		{398AD3D2-E8C5-45D1-8034-12CE6D073A4C} = {2CDAAF33-09B0-4A10-9C6C-46BF8ED7A62A}
 		{E27755A2-0A76-439D-A7A0-6F074352A069} = {2CDAAF33-09B0-4A10-9C6C-46BF8ED7A62A}
+		{4A5A3AC2-5CCD-42D0-BEAC-8A08C1F72C90} = {503E458D-E7E9-458D-AB87-8770927993B7}
+		{A7DE76E7-C6B6-4C1C-9AC3-B6031B6B27FC} = {503E458D-E7E9-458D-AB87-8770927993B7}
+		{818D338E-E183-4418-9BE5-A047347533DC} = {10BC9D50-DC99-4803-BA8F-10CA3DC8B699}
+		{072D4A2B-B876-4439-A268-00D2A7D54855} = {503E458D-E7E9-458D-AB87-8770927993B7}
 	EndGlobalSection
 EndGlobal

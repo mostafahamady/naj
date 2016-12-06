@@ -1,0 +1,41 @@
+﻿<script type="text/javascript">
+    home
+        .controller('latestNewsRotatorCtrl', function($scope, $timeout, $http) {
+            $http({
+                    method: 'GET',
+                    url: '/MediaCenter/News/Latest'
+                })
+                .then(
+                    function successCallback(response) {
+                        $scope.slickApply(function() {
+                            $scope.latestNews = response.data;
+                        });
+                        $scope.dataLoaded = true;
+                    },
+                    function errorCallback(response) {
+                    }
+                );
+        });
+</script>
+
+<section class="Rotator">
+    <h1 class="centered slide-left">...آخر الأخبار</h1>
+    <div class="Rotator-content" ng-controller="latestNewsRotatorCtrl">
+        <slick init-onload="true" slick-apply='slickApply' data="dataLoaded" autoplay="true" autoplayspeed="500" fade="true">
+            <div ng-repeat="new in latestNews">
+                <div class="RotatorImage">
+                    <img src="{{new.ImageURL}}" />
+                </div>
+                <div class="RotatorText">
+                    <h3>{{new.Title}}</h3>
+                    <span>
+                        {{new.Details}}
+                    </span>
+                    <div>
+                        <a href="{{new.URL}}">المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </slick>
+    </div>
+</section>

@@ -1,1 +1,61 @@
-﻿<h3>Hiii shalsh</h3>
+﻿@{
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+    Page.Title = "أمانة منطقة نجران";
+}
+
+@section Head
+{
+    <script type="text/javascript">
+        var home = angular.module('homeApp', ['slick']);
+    </script>
+}
+
+<div ng-app="homeApp">
+    <div class="sequence-theme">
+        @{
+            Html.RenderPartial("~/Areas/MediaCenter/Views/News/_BookmarkedNews.cshtml");
+        }
+    </div>
+    <div class="PannerFooter">
+        <img alt="" src="/assets/images/PannerFooter.jpg">
+    </div>
+    <div class="MainContent">
+        <section>
+            <h1 class="centered margTop20">خدماتنا الإلكترونية</h1>
+            <h5 class="centered margBot20">
+                يمكنك الاستفادة من جميع خدماتنا عن طريق التسجيل
+                بالموقع <a href="http://EServices.localhost/Registration">من هنا</a> واذا كنت مسجل فعليا يمكنك اختيار الخدمة
+            </h5>
+            <div class="MainthreeServ">
+                <div class="threeServ WitLftBrd hideme">
+                    <a class="GreenBg" href="http://EServices.localhost/Individual" target="_blank">
+                        <img src="/assets/images/EServHu.png" />
+                        <h3 class="bolded">خدمات الأفراد</h3>
+                        بوابة الخدمات التي تقدم للأفراد سواء من مواطني المملكة أو الوافدين
+                        المقيمين بنجران
+                    </a>
+                </div>
+                <div class="threeServ WitLftBrd GrayRitBrd hideme">
+                    <a class="RedBg" href="http://EServices.localhost/Business" target="_blank">
+                        <img src="/assets/images/EServBu.png" />
+                        <h3 class="bolded">خدمات قطاع الأعمال</h3>
+                        (مركز الأعمال) بوابة الخدمات التي تقدم لأصحاب الأعمال والقطاع الخاص
+                    </a>
+                </div>
+                <div class="threeServ GrayRitBrd hideme">
+                    <a class="YelowBg" href="http://EServices.localhost/Government" target="_blank">
+                        <img src="/assets/images/EServGov.png" />
+                        <h3 class="bolded">خدمات الجهات الحكومية</h3>
+                        بوابة الخدمات التي تقدم للجهات الحكومية المختلفة داخل منطقة نجران
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="Separator centered">
+            <img src="/assets/images/SeparatorImg.jpg">
+        </div>
+        @{
+            Html.RenderPartial("~/Areas/MediaCenter/Views/News/_LatestNews.cshtml");
+        }
+    </div>
+</div>

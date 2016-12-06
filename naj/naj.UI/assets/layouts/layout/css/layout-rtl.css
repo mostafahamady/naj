@@ -34,9 +34,9 @@
   padding: 0 20px 0 20px;
   margin: 0;
   border: 0px;
-  padding: 0px;
+  padding: 10px;
   box-shadow: none;
-  height: 50px;
+  height: 70px;
   min-height: 50px;
   filter: none;
   background-image: none;
@@ -55,7 +55,7 @@
     width: 235px;
     height: 50px;
     padding-right: 20px;
-    padding-left: 20px; }
+    padding-left: 0px; }
     .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .page-logo {
       padding: 0; }
     .page-header.navbar .page-logo > .logo-image,
@@ -63,7 +63,7 @@
       display: inline-block;
       float: right; }
     .page-header.navbar .page-logo .logo-default {
-      margin: 18px 0 0 0; }
+      margin: 8px 0 0 0; }
     .page-header.navbar .page-logo .logo-mini {
       display: none;
       margin-right: 5px; }
@@ -173,7 +173,6 @@
       float: left;
       margin: 15.5px 6px 0 6px; }
   .page-header.navbar .top-menu {
-    margin: 0;
     padding: 0;
     float: left; }
     .page-header.navbar .top-menu .navbar-nav {
@@ -709,7 +708,7 @@
   .page-container:after {
     clear: both; }
   .page-header-fixed .page-container {
-    margin-top: 50px; }
+    margin-top: 70px; }
   .page-footer-fixed.page-footer-fixed-mobile .page-container {
     margin-bottom: 20px !important; }
 
@@ -823,14 +822,15 @@ Page sidebar
         text-shadow: none;
         font-size: 15px; }
         .page-sidebar .page-sidebar-menu > li.active > a > .selected,
-        .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a > .selected {
+        .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a > .selected,
+        .page-sidebar-menu > li.active > .sub-menu > li.active > a > .selected  {
           display: block;
           background-image: none;
           /* will be set in a theme css file*/
           float: left;
           position: absolute;
           left: 0px;
-          top: 8px;
+          top: 5px;
           background: none;
           width: 0;
           height: 0;
@@ -1642,6 +1642,7 @@ Page content
     display: block;
     clear: both; } }
 .page-footer {
+  text-align:center;
   padding: 8px 20px 5px 20px;
   font-size: 14px;
   height: 33px; }
@@ -1651,7 +1652,7 @@ Page content
   .page-footer:after {
     clear: both; }
   .page-footer .page-footer-inner {
-    float: right;
+    /*float: right;*/
     display: inline-block; }
   .page-footer-fixed.page-footer-fixed-mobile .page-footer {
     position: fixed;
