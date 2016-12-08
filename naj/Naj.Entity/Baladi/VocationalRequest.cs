@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Momra.Data.Entities
+namespace Naj.Entity
 {
     [Table("Baladi.VocationRequest")]
     public class VocationalRequest : IEntity<Guid>
@@ -22,7 +22,7 @@ namespace Momra.Data.Entities
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
 
         [Required]
         [StringLength(50)]

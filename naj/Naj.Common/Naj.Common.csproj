@@ -38,6 +38,9 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="LinqKit">
+      <HintPath>..\..\..\..\..\Desktop\LinqKit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -49,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\IQueryableExt.cs" />
     <Compile Include="Extensions\DbContextExt.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Initializers\CreateDatabaseIfNotExistsInitializer.cs" />
@@ -56,9 +60,10 @@
     <Compile Include="Initializers\DropCreateDatabaseIfModelChangesInitializer.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IRepositoryProvider.cs" />
-    <Compile Include="LinqExpression.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Extensions\StringExt.cs" />
+    <Compile Include="RepositoryFactories.cs" />
+    <Compile Include="RepositoryProvider.cs" />
     <Compile Include="TableRepository.cs" />
     <Compile Include="Uow.cs" />
     <Compile Include="ViewRepository.cs" />

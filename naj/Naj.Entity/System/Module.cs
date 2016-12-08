@@ -21,7 +21,7 @@ namespace Naj.Entity
         #region Properties
 
         [Key]
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
         [Required]
         [StringLength(50)]
         public string Name { get; set; }

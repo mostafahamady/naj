@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 
-namespace Naj.Entity.Configuration
+namespace Naj.Entity
 {
     #region Module Configuration
     public class ModuleConfiguration : EntityTypeConfiguration<Module>

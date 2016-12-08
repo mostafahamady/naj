@@ -1,9 +1,8 @@
-﻿using Naj.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 
-namespace Naj.Data
+namespace Naj.Common
 {
     public class RepositoryProvider : IRepositoryProvider
     {

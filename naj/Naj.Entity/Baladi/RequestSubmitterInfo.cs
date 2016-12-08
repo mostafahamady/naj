@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Momra.Data.Entities
+namespace Naj.Entity
 {
     [Table("Baladi.RequestSubmitterInfo")]
     public class RequestSubmitterInfo : IEntity<Guid>
@@ -22,7 +22,7 @@ namespace Momra.Data.Entities
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
 
         [StringLength(500)]
         public string FullName { get; set; }

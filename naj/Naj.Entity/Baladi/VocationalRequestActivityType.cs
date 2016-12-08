@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Momra.Data.Entities
+namespace Naj.Entity
 {
     [Table("Baladi.VocationalRequestActivityType")]
     public class VocationalRequestActivityType : IEntity<Guid>
@@ -16,7 +16,7 @@ namespace Momra.Data.Entities
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
 
         public Guid VocationalRequestId { get; set; }
         public Guid RequestActivityTypeId { get; set; }

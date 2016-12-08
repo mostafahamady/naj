@@ -10,13 +10,15 @@ namespace Naj.Common
         DbSet<TEntity> GetAll();
 
         IQueryable<TEntity> Filter<TProperty>(string PropertyName, TProperty PropertyValue);
+
+        IQueryable<TEntity> Search(string PropertyValue);
     }
 
     public interface ITableRepository<TEntity, TKey> : IViewRepository<TEntity>
         where TEntity : class,IEntity<TKey>
         where TKey : IComparable<TKey>
     {
-        TEntity GetByID(TKey ID);
+        TEntity GetById(TKey Id);
 
         void Add(TEntity entity);
 
@@ -24,10 +26,10 @@ namespace Naj.Common
 
         void Delete(TEntity entity);
 
-        void Delete(TKey ID);
+        void Delete(TKey Id);
 
         void Commit();
 
-        dynamic MaxID();
+        dynamic MaxId();
     }
 }

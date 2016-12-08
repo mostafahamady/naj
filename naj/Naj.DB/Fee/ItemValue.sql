@@ -19,5 +19,6 @@
 	CONSTRAINT [FK_ItemValue_ActivityType] FOREIGN KEY ([ActivityTypeId]) REFERENCES [Fee].[ActivityType]([Id]),
 	CONSTRAINT [FK_ItemValue_Accomendation] FOREIGN KEY ([AccomendationId]) REFERENCES [Fee].[Accomendation]([Id]),
 	CONSTRAINT [FK_ItemValue_Unit] FOREIGN KEY ([UnitId]) REFERENCES [Fee].[Unit]([Id]),
-	CONSTRAINT [FK_ItemValue_Segement] FOREIGN KEY ([SegementId]) REFERENCES [Fee].[Segement]([Id])
+	CONSTRAINT [FK_ItemValue_Segement] FOREIGN KEY ([SegementId]) REFERENCES [Fee].[Segement]([Id]),
+	CONSTRAINT [FK_ItemValue_Duration] FOREIGN KEY ([DurationId]) REFERENCES [Fee].[Duration]([Id])
 )

@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" dir="rtl">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="@ViewData["Description"]" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/global/plugins/bootstrap/css/bootstrap-rtl.css" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/global/plugins/bootstrap-switch/css/bootstrap-switch-rtl.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="http://UI.localhost/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/global/plugins/datatables/datatables.css" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap-rtl.css" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+    @RenderSection("PluginsStyles", required: false)
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="http://UI.localhost/assets/global/css/components-rtl.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="http://UI.localhost/assets/global/css/plugins-rtl.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="http://UI.localhost/assets/layouts/layout/css/layout-rtl.css" rel="stylesheet" type="text/css" />
+    <link href="http://UI.localhost/assets/layouts/layout/css/themes/naj-rtl.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="http://UI.localhost/assets/layouts/layout/css/custom-rtl.min.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME LAYOUT STYLES -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    @*<script src="~/scripts/require.js" data-main="/scripts/main.js"></script>*@
+</head>
+<!-- END HEAD -->
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+    <div class="page-wrapper">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="http://www.localhost">
+                        <img src="http://UI.localhost/assets/layouts/layout/img/logo-big.png" alt="logo" class="logo-default" />
+                    </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <span></span>
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span></span>
+                </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <img alt="" class="img-circle" src="http://UI.localhost/assets/layouts/layout/img/avatar.jpg" />
+                                <span class="username username-hide-on-mobile">حسين محمد اليامي</span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="page_user_profile_1.html">
+                                        <i class="icon-user"></i>بياناتي
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="app_inbox.html">
+                                        <i class="icon-envelope-open"></i>بريدي
+                                        <span class="badge badge-error"> 3 </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="app_todo.html">
+                                        <i class="icon-list"></i>مهامي
+                                        <span class="badge badge-success"> 7 </span>
+                                    </a>
+                                </li>
+                                <li class="divider">
+
+                                </li>
+                                <li>
+                                    <a href="page_user_login_1.html">
+                                        <i class="icon-key"></i>تسجيل خروج
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+                <!-- BEGIN MEGA MENU -->
+                <!-- DOC: Remove "hor-menu-light" class to have a horizontal menu with theme background instead of white background -->
+                <!-- DOC: This is desktop version of the horizontal menu. The mobile version is defined(duplicated) in the responsive menu below along with sidebar menu. So the horizontal menu has 2 seperate versions -->
+                <div class="hidden-xs">
+                    <div class="" style="color: #e1ed9c;text-align:center;padding-top:16px;">
+                        <h3 style="margin:0px;">
+                            بوابة بلدي الألكترونية
+                        </h3>
+                    </div>
+                </div>
+                <!-- END MEGA MENU -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            @{
+                Html.RenderPartial("_SideBar");
+            }
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content" id="ViewContainer">
+                    @RenderBody()
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner">
+                جميع الحقوق محفوظة لــ أمانة منطقة نجران ©2016 | هذا الموقع تتم إدارته بواسطة أمانة منطقة نجران | رقم إصدار هذا الموقع v1.0
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+    </div>
+    <!--[if lt IE 9]>
+    <script src="http://UI.localhost/assets/global/plugins/respond.min.js"></script>
+    <script src="http://UI.localhost/assets/global/plugins/excanvas.min.js"></script>
+    <script src="http://UI.localhost/assets/global/plugins/ie8.fix.min.js"></script>
+    <![endif]-->
+    <!-- BEGIN CORE PLUGINS -->
+    <script src="http://UI.localhost/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="http://UI.localhost/assets/global/plugins/moment.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/scripts/datatable.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    @RenderSection("PluginsScripts", required: false)
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="http://UI.localhost/assets/global/scripts/app.js" type="text/javascript"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    @RenderSection("PageScripts", required: false)
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="http://UI.localhost/assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="http://UI.localhost/assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <script type="text/javascript">
+
+        function highLight(obj) {
+            $('.sub-menu .nav-item').removeClass('active');
+            $(obj).parent().addClass('active');
+            $('.sub-menu .nav-item .selected').remove();
+            $(obj).append($("<span>").addClass("selected"));
+            $('.page-sidebar-menu > .nav-item').removeClass('active');
+            $('.sub-menu .nav-item.active').parent().parent().addClass('active');
+        }
+
+        $(window).load(function () {
+            $('.sub-menu .nav-link').on('click', function () {
+                highLight(this);
+            })
+        });
+
+        function route() {
+            var hash = window.location.hash;
+            var PageTab = $('a[href="' + hash + '"]');
+
+            var routes = hash.replace('#', '').split('/');
+            var view = routes[1], controller = routes[0];
+
+            if (view != undefined && controller != undefined)
+                $.ajax({
+                    url: hash.replace('#', ''),
+                    type: 'GET',
+                    dataType: 'html',
+                    contentType: 'application/html; charset=utf-8',
+                    success: function (response, status, xhr) {
+                        $('#ViewContainer').empty();
+                        $('#ViewContainer').append(response);
+                        highLight(PageTab);
+                    },
+                    error: function (xhr, status, error) {
+                        alert('error in get ' + hash.replace('#', ''));
+                        //$('#ViewContainer').html($('<h1></h1>').html(''));
+                    },
+                    complete: function (jqXHR, status) {
+                    }
+                });
+            else {
+                //alert('route URL is undefined');
+                //$('#ViewContainer').html($('<h1></h1>').html(''));
+            }
+        }
+
+        $(window).load(route());
+
+        $(window).on('hashchange', function () {
+            route();
+        });
+
+    </script>
+</body>
+</html>

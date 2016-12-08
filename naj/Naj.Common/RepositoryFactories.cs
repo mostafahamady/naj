@@ -1,33 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using Naj.Common;
-using Naj.Entity;
 
-namespace Naj.Data
+namespace Naj.Common
 {
     public class RepositoryFactories
     {
         private readonly IDictionary<Type, Func<DbContext, object>> _repositoryFactories;
 
-        public RepositoryFactories()
-        {
-            _repositoryFactories = GetAppFactories();
-        }
-
         public RepositoryFactories(IDictionary<Type, Func<DbContext, object>> factories)
         {
             _repositoryFactories = factories;
-        }
-
-        private IDictionary<Type, Func<DbContext, object>> GetAppFactories()
-        {
-            return new Dictionary<Type, Func<DbContext, object>>
-            {
-               {typeof(ITableRepository<Module,Guid>), dbContext => new TableRepository<Module,Guid>(dbContext)},
-                {typeof(ITableRepository<Menu,Guid>), dbContext => new TableRepository<Menu,Guid>(dbContext)},
-                {typeof(ITableRepository<Page,Guid>), dbContext => new TableRepository<Page,Guid>(dbContext)},
-            };
         }
 
         public Func<DbContext, object> GetRepositoryFactory<TRepository>()

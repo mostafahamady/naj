@@ -15,24 +15,24 @@ namespace Naj.Common
     {
         public TableRepository(DbContext dbContext) : base(dbContext) { }
 
-        public virtual TEntity GetByID(TKey ID)
+        public virtual TEntity GetById(TKey Id)
         {
-            return DbSet.Find(ID);
+            return DbSet.Find(Id);
         }
 
         public virtual void Add(TEntity entity)
         {
-            PropertyInfo prop = typeof(TEntity).GetProperty("ID");
+            PropertyInfo prop = typeof(TEntity).GetProperty("Id");
             List<Attribute> attrs = prop.GetCustomAttributes().ToList<Attribute>();
 
             foreach (var attr in attrs)
                 if (attr is DatabaseGeneratedAttribute)
                     if (((DatabaseGeneratedAttribute)attr).DatabaseGeneratedOption == DatabaseGeneratedOption.None)
                         if (prop.GetType() == typeof(Guid))
-                            if ((Guid)(object)entity.ID == Guid.Empty)
-                                entity.ID = (TKey)(object)Guid.NewGuid();
+                            if ((Guid)(object)entity.Id == Guid.Empty)
+                                entity.Id = (TKey)(object)Guid.NewGuid();
                         else
-                            entity.ID = MaxID() + 1;
+                            entity.Id = MaxId() + 1;
 
             DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
             if (dbEntityEntry.State != EntityState.Detached)
@@ -61,9 +61,9 @@ namespace Naj.Common
             }
         }
 
-        public virtual void Delete(TKey ID)
+        public virtual void Delete(TKey Id)
         {
-            var entity = GetByID(ID);
+            var entity = GetById(Id);
             if (entity == null) return; // not found
             Delete(entity);
         }
@@ -73,9 +73,9 @@ namespace Naj.Common
             DbContext.SaveChanges<TEntity>();
         }
 
-        public dynamic MaxID()
+        public dynamic MaxId()
         {
-            return DbSet.OrderByDescending(e=>e.ID).Select(e=>e.ID).FirstOrDefault();
+            return DbSet.OrderByDescending(e=>e.Id).Select(e=>e.Id).FirstOrDefault();
         }
     }
 }

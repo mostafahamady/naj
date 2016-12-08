@@ -49,15 +49,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs" />
-    <Compile Include="Module.cs" />
-    <Compile Include="Page.cs" />
+    <Compile Include="Baladi\_Configurations.cs" />
+    <Compile Include="Fee\Accomendation.cs" />
+    <Compile Include="Fee\Activity.cs" />
+    <Compile Include="Fee\ActivityType.cs" />
+    <Compile Include="Fee\BuildingUsage.cs" />
+    <Compile Include="Fee\Duration.cs" />
+    <Compile Include="Fee\Item.cs" />
+    <Compile Include="Fee\ItemOperation.cs" />
+    <Compile Include="Fee\ItemType.cs" />
+    <Compile Include="Fee\ItemValue.cs" />
+    <Compile Include="Fee\MainActivity.cs" />
+    <Compile Include="Fee\Municipality.cs" />
+    <Compile Include="Fee\Segement.cs" />
+    <Compile Include="Fee\ServiceClass.cs" />
+    <Compile Include="Fee\ServiceRate.cs" />
+    <Compile Include="Fee\ServiceType.cs" />
+    <Compile Include="Fee\Slice.cs" />
+    <Compile Include="Fee\SliceType.cs" />
+    <Compile Include="Fee\Unit.cs" />
+    <Compile Include="Fee\_Configurations.cs" />
+    <Compile Include="System\Menu.cs" />
+    <Compile Include="System\Module.cs" />
+    <Compile Include="System\Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestActivityType.cs" />
-    <Compile Include="RequestSubmitterInfo.cs" />
-    <Compile Include="VocationalRequest.cs" />
-    <Compile Include="VocationalRequestActivityType.cs" />
-    <Compile Include="_Configurations.cs" />
+    <Compile Include="Baladi\RequestActivityType.cs" />
+    <Compile Include="Baladi\RequestSubmitterInfo.cs" />
+    <Compile Include="Baladi\VocationalRequest.cs" />
+    <Compile Include="Baladi\VocationalRequestActivityType.cs" />
+    <Compile Include="System\_Configurations.cs" />
     <Compile Include="_Context.cs" />
   </ItemGroup>
   <ItemGroup>

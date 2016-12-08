@@ -17,8 +17,8 @@ namespace Naj.Common
             DbSet = dbContext.Set<TEntity>();
         }
 
-        protected DbContext DbContext { get; set; }
-        protected DbSet<TEntity> DbSet { get; set; }
+        internal DbContext DbContext { get; set; }
+        internal DbSet<TEntity> DbSet { get; set; }
 
         public virtual DbSet<TEntity> GetAll()
         {
@@ -27,8 +27,12 @@ namespace Naj.Common
 
         public IQueryable<TEntity> Filter<TProperty>(string PropertyName, TProperty PropertyValue)
         {
-            Expression<Func<TEntity, bool>> predicate = LinqExpression.EqualExpression<TEntity, TProperty>(PropertyName, PropertyValue);
-            return DbSet.Where<TEntity>(predicate);
+            return DbSet.Where<TEntity>(PropertyName, WhereOpertaor.Equal, PropertyValue);
+        }
+
+        public IQueryable<TEntity> Search(string PropertyValue)
+        {
+            return DbSet.Search(PropertyValue);
         }
 
         public void Dispose()

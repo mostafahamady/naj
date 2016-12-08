@@ -49,10 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RepositoryProvider.cs" />
     <Compile Include="NajUow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryFactories.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

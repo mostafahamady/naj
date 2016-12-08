@@ -15,7 +15,7 @@ namespace Naj.EServices.Controllers
         {
             get
             {
-                return new NajUow(new RepositoryProvider(new RepositoryFactories())).Menus.GetAll().SelectMany(m => m.Pages);
+                return new NajUow().Menus.GetAll().SelectMany(m => m.Pages);
             }
         }
 
